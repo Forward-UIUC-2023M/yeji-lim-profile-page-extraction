@@ -1,0 +1,17 @@
+{
+  "name": "ForwardData Info XPath Finder",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Build an Basic Extension!",
+  "author": "Yeji Lim",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+        "medium-highlighter.js",
+        "content.js"
+      ]
+    }
+  ]
+}

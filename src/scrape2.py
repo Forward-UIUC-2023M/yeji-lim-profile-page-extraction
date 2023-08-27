@@ -12,7 +12,7 @@ from datetime import datetime
 # What to do with parsing titles
 
 config = ConfigParser()
-config.read('configuration.ini')
+config.read('config/configuration.ini')
 
 
 # eval
@@ -21,7 +21,6 @@ def scrape(website, url):
     # print(website)
 
     # Request the page
-    # page = requests.get('https://en.wikipedia.org/wiki/Nike,_Inc.')
     page = requests.get(url, verify=False)
     if (website == "google"):
         payload = {'api_key': '8433e59abd6def584593acab9c9d2d73', 'url': url}
@@ -52,12 +51,12 @@ def scrape(website, url):
         name = 'none'
     else:
         name_query = tree.xpath(config_data['name'])
-        print('name query: ', name_query)
+        # print('name query: ', name_query)
         if (len(name_query) == 0):
-            print('cant find name')
+            # print('cant find name')
             name = 'none'
         else:
-            print(name_query[0].text)
+            # print(name_query[0].text)
             name = name_query[0].text.strip()
 
     institution = ''

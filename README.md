@@ -1,4 +1,4 @@
-# yeji_lim_profile_page_extraction-Research
+# yeji_lim_profile_page_extraction
 ## Overview
 
 THis module is responsible for getting desired profile information of well-known websites using xpath.
